@@ -64,6 +64,7 @@ public class ExampleMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        Items.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -100,8 +101,15 @@ public class ExampleMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        //Here you can see there is an already existing Example_Block_Item that has been created.
+        //You will start by creating an if statement that will allocate the item you are putting
+        // in the game to the tab that you open when in creative or while building in minecraft.
+        //Once you have written the CreativeModeTabs there will be a list of Tabs to put it in if your item is say a foods you would put it in the Foo_and_Drinks tab
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(EXAMPLE_BLOCK_ITEM);
+        //Inside the parameters of the event.accept you will specify the location of the item as well as the Items name.
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
+            event.accept(Items.TESTITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

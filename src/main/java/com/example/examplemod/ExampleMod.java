@@ -69,12 +69,13 @@ public class ExampleMod
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
-        CREATIVE_MODE_TABS.register(modEventBus);
+        //CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -110,7 +111,7 @@ public class ExampleMod
             event.accept(EXAMPLE_BLOCK_ITEM);
         //Inside the parameters of the event.accept you will specify the location of the item as well as the Items name.
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
-            event.accept(ModItems.TESTITEM);
+            event.accept(Items.TESTITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

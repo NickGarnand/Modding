@@ -64,7 +64,8 @@ public class ExampleMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        Items.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -109,7 +110,7 @@ public class ExampleMod
             event.accept(EXAMPLE_BLOCK_ITEM);
         //Inside the parameters of the event.accept you will specify the location of the item as well as the Items name.
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
-            event.accept(Items.TESTITEM);
+            event.accept(ModItems.TESTITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

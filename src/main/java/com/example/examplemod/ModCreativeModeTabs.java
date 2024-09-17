@@ -19,7 +19,7 @@ public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE
         .icon(() -> new ItemStack(Items.BREAD))
         .displayItems((pParameters, pOutput) -> {
             pOutput.accept(ModItems.TESTITEM.get());
-           // pOutput.accept(Blocks.BREAD_BLOCK.get());
+            pOutput.accept(ModBlocks.BREADBLOCK.get());
             pOutput.accept(Items.BREAD);
         })
         .build());

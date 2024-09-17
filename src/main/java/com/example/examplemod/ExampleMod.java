@@ -111,7 +111,7 @@ public class ExampleMod
             event.accept(EXAMPLE_BLOCK_ITEM);
         //Inside the parameters of the event.accept you will specify the location of the item as well as the Items name.
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
-            event.accept(Items.TESTITEM);
+            event.accept(ModItems.TESTITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

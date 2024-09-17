@@ -1,4 +1,5 @@
 {
   "examplemod.modblocks": "Bread Block",
-  "creativetab.tutorial_tab": "Maddux and Nick Mod Tab"
+  "creativetab.tutorial_tab": "Maddux and Nick Mod Tab",
+  "block.examplemod.bread_block": "Bread Block"
 }

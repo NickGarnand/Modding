@@ -1,19 +1,12 @@
-package com.example.examplemod.events;
+package com.bread.MadduxXHineko.events;
 
-import com.example.examplemod.ExampleMod;
-import com.example.examplemod.ModBlocks;
-import com.example.examplemod.ModItems;
+import com.bread.MadduxXHineko.breadblockmod.BreadBlockMod;
+import com.bread.MadduxXHineko.breadblockmod.block.ModBlocks;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.minecraft.core.Holder;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.item.EnchantedBookItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.village.VillagerTradesEvent;
@@ -22,7 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = ExampleMod.MODID)
+@Mod.EventBusSubscriber(modid = BreadBlockMod.MODID)
 public class ModEvents {
     @SubscribeEvent
     public static void addcustomTrades(VillagerTradesEvent event){

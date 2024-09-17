@@ -1,6 +1,5 @@
-package com.example.examplemod;
+package com.bread.MadduxXHineko.breadblockmod;
 
-import net.minecraft.client.tutorial.Tutorial;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -10,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     //After you create and register the item/subject the next step is to load it into the IEventBus
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MODID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, BreadBlockMod.MODID);
 
     //Next you should go to where you IEventBus register is located which should be under ExampleMod Class in the ExampleMod file
     public static void register(IEventBus eventBus){

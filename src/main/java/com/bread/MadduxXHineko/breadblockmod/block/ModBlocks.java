@@ -1,5 +1,7 @@
-package com.example.examplemod;
+package com.bread.MadduxXHineko.breadblockmod.block;
 
+import com.bread.MadduxXHineko.breadblockmod.BreadBlockMod;
+import com.bread.MadduxXHineko.breadblockmod.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -15,7 +17,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, ExampleMod.MODID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, BreadBlockMod.MODID);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
